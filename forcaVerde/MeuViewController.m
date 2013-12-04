@@ -19,9 +19,14 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         locationManager = [[CLLocationManager alloc] init];
+        
+        [self.view addSubview: [self telaInicial]];
+        
+    
     }
     return self;
 }
+
 
 - (void)viewDidLoad
 {
@@ -30,6 +35,9 @@
     locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     [locationManager startUpdatingLocation];
     // Do any additional setup after loading the view from its nib.
+    
+  
+    
 }
 
 - (void)didReceiveMemoryWarning
