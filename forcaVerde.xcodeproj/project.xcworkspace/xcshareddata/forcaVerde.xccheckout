@@ -5,19 +5,31 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
+<<<<<<< HEAD
+	<string>24B684AD-3335-43F1-9EE8-2CFBC3C243D6</string>
+=======
 	<string>56152B8A-0073-42F4-A345-E8F87B485709</string>
+>>>>>>> aaa7827d38b6478823ad0d66532c936cc0e60673
 	<key>IDESourceControlProjectName</key>
 	<string>forcaVerde</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+<<<<<<< HEAD
+		<key>68F0E103-35FD-485A-AC02-746275FA85D8</key>
+=======
 		<key>BB38CA62-1052-4EEB-9F90-698930EB4107</key>
+>>>>>>> aaa7827d38b6478823ad0d66532c936cc0e60673
 		<string>https://github.com/paluch/forcaVerde.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>forcaVerde.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+<<<<<<< HEAD
+		<key>68F0E103-35FD-485A-AC02-746275FA85D8</key>
+=======
 		<key>BB38CA62-1052-4EEB-9F90-698930EB4107</key>
+>>>>>>> aaa7827d38b6478823ad0d66532c936cc0e60673
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
@@ -25,14 +37,22 @@
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
+<<<<<<< HEAD
+	<string>68F0E103-35FD-485A-AC02-746275FA85D8</string>
+=======
 	<string>BB38CA62-1052-4EEB-9F90-698930EB4107</string>
+>>>>>>> aaa7827d38b6478823ad0d66532c936cc0e60673
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
+<<<<<<< HEAD
+			<string>68F0E103-35FD-485A-AC02-746275FA85D8</string>
+=======
 			<string>BB38CA62-1052-4EEB-9F90-698930EB4107</string>
+>>>>>>> aaa7827d38b6478823ad0d66532c936cc0e60673
 			<key>IDESourceControlWCCName</key>
 			<string>forcaVerde</string>
 		</dict>
