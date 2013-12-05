@@ -13,6 +13,7 @@
 {
     CLLocationManager *locationManager;
 }
+@property (strong, nonatomic) IBOutlet UIView *telaInicial;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 - (IBAction)takePhoto:(id)sender;
 - (IBAction)selectPhoto:(id)sender;

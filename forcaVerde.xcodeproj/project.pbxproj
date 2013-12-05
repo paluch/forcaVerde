@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA5135BE184EAF0000AC3069 /* PagIniViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5135BC184EAF0000AC3069 /* PagIniViewController.m */; };
+		EA5135BF184EAF0000AC3069 /* PagIniViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA5135BD184EAF0000AC3069 /* PagIniViewController.xib */; };
+		EA5135C3184EB0A900AC3069 /* SelectTipoCrime.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5135C1184EB0A900AC3069 /* SelectTipoCrime.m */; };
+		EA5135C4184EB0A900AC3069 /* SelectTipoCrime.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA5135C2184EB0A900AC3069 /* SelectTipoCrime.xib */; };
+		EA649C0B184E6BB9002308E1 /* TelaInicial.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA649C0A184E6BB9002308E1 /* TelaInicial.xib */; };
 		FFC7DCEA184E52E000A766B3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFC7DCE9184E52E000A766B3 /* Foundation.framework */; };
 		FFC7DCEC184E52E000A766B3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFC7DCEB184E52E000A766B3 /* CoreGraphics.framework */; };
 		FFC7DCEE184E52E000A766B3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFC7DCED184E52E000A766B3 /* UIKit.framework */; };
@@ -35,6 +40,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EA5135BB184EAF0000AC3069 /* PagIniViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PagIniViewController.h; sourceTree = "<group>"; };
+		EA5135BC184EAF0000AC3069 /* PagIniViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PagIniViewController.m; sourceTree = "<group>"; };
+		EA5135BD184EAF0000AC3069 /* PagIniViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PagIniViewController.xib; sourceTree = "<group>"; };
+		EA5135C0184EB0A900AC3069 /* SelectTipoCrime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectTipoCrime.h; sourceTree = "<group>"; };
+		EA5135C1184EB0A900AC3069 /* SelectTipoCrime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectTipoCrime.m; sourceTree = "<group>"; };
+		EA5135C2184EB0A900AC3069 /* SelectTipoCrime.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectTipoCrime.xib; sourceTree = "<group>"; };
+		EA649C0A184E6BB9002308E1 /* TelaInicial.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TelaInicial.xib; sourceTree = "<group>"; };
 		FFC7DCE6184E52E000A766B3 /* forcaVerde.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = forcaVerde.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFC7DCE9184E52E000A766B3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FFC7DCEB184E52E000A766B3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -120,9 +132,16 @@
 				FFC7DCF9184E52E000A766B3 /* AppDelegate.m */,
 				FFC7DCFB184E52E000A766B3 /* Images.xcassets */,
 				FFC7DCF0184E52E000A766B3 /* Supporting Files */,
+				EA5135BB184EAF0000AC3069 /* PagIniViewController.h */,
+				EA5135BC184EAF0000AC3069 /* PagIniViewController.m */,
+				EA5135BD184EAF0000AC3069 /* PagIniViewController.xib */,
+				EA5135C0184EB0A900AC3069 /* SelectTipoCrime.h */,
+				EA5135C1184EB0A900AC3069 /* SelectTipoCrime.m */,
+				EA5135C2184EB0A900AC3069 /* SelectTipoCrime.xib */,
 				FFC7DD18184E533400A766B3 /* MeuViewController.h */,
 				FFC7DD19184E533400A766B3 /* MeuViewController.m */,
 				FFC7DD1A184E533400A766B3 /* MeuViewController.xib */,
+				EA649C0A184E6BB9002308E1 /* TelaInicial.xib */,
 			);
 			path = forcaVerde;
 			sourceTree = "<group>";
@@ -231,9 +250,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA5135C4184EB0A900AC3069 /* SelectTipoCrime.xib in Resources */,
 				FFC7DCF4184E52E000A766B3 /* InfoPlist.strings in Resources */,
 				FFC7DD1C184E533400A766B3 /* MeuViewController.xib in Resources */,
 				FFC7DCFC184E52E000A766B3 /* Images.xcassets in Resources */,
+				EA5135BF184EAF0000AC3069 /* PagIniViewController.xib in Resources */,
+				EA649C0B184E6BB9002308E1 /* TelaInicial.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,6 +274,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA5135BE184EAF0000AC3069 /* PagIniViewController.m in Sources */,
+				EA5135C3184EB0A900AC3069 /* SelectTipoCrime.m in Sources */,
 				FFC7DCFA184E52E000A766B3 /* AppDelegate.m in Sources */,
 				FFC7DD1B184E533400A766B3 /* MeuViewController.m in Sources */,
 				FFC7DCF6184E52E000A766B3 /* main.m in Sources */,
@@ -457,6 +481,7 @@
 				FFC7DD14184E52E000A766B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FFC7DD15184E52E000A766B3 /* Build configuration list for PBXNativeTarget "forcaVerdeTests" */ = {
 			isa = XCConfigurationList;
@@ -465,6 +490,7 @@
 				FFC7DD17184E52E000A766B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
