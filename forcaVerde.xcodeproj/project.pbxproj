@@ -12,6 +12,7 @@
 		EA5135C3184EB0A900AC3069 /* SelectTipoCrime.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5135C1184EB0A900AC3069 /* SelectTipoCrime.m */; };
 		EA5135C4184EB0A900AC3069 /* SelectTipoCrime.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA5135C2184EB0A900AC3069 /* SelectTipoCrime.xib */; };
 		EA649C0B184E6BB9002308E1 /* TelaInicial.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA649C0A184E6BB9002308E1 /* TelaInicial.xib */; };
+		FF26A6281850EB24005A5472 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF26A6271850EB24005A5472 /* MessageUI.framework */; };
 		FFC7DCEA184E52E000A766B3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFC7DCE9184E52E000A766B3 /* Foundation.framework */; };
 		FFC7DCEC184E52E000A766B3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFC7DCEB184E52E000A766B3 /* CoreGraphics.framework */; };
 		FFC7DCEE184E52E000A766B3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFC7DCED184E52E000A766B3 /* UIKit.framework */; };
@@ -47,6 +48,7 @@
 		EA5135C1184EB0A900AC3069 /* SelectTipoCrime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectTipoCrime.m; sourceTree = "<group>"; };
 		EA5135C2184EB0A900AC3069 /* SelectTipoCrime.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectTipoCrime.xib; sourceTree = "<group>"; };
 		EA649C0A184E6BB9002308E1 /* TelaInicial.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TelaInicial.xib; sourceTree = "<group>"; };
+		FF26A6271850EB24005A5472 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		FFC7DCE6184E52E000A766B3 /* forcaVerde.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = forcaVerde.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFC7DCE9184E52E000A766B3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FFC7DCEB184E52E000A766B3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -78,6 +80,7 @@
 				FFC7DCEE184E52E000A766B3 /* UIKit.framework in Frameworks */,
 				FFC7DCEA184E52E000A766B3 /* Foundation.framework in Frameworks */,
 				FFC7DD1E184E562C00A766B3 /* CoreLocation.framework in Frameworks */,
+				FF26A6281850EB24005A5472 /* MessageUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,6 +119,7 @@
 		FFC7DCE8184E52E000A766B3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FF26A6271850EB24005A5472 /* MessageUI.framework */,
 				FFC7DD1D184E562C00A766B3 /* CoreLocation.framework */,
 				FFC7DCE9184E52E000A766B3 /* Foundation.framework */,
 				FFC7DCEB184E52E000A766B3 /* CoreGraphics.framework */,
@@ -403,6 +407,7 @@
 				GCC_PREFIX_HEADER = "forcaVerde/forcaVerde-Prefix.pch";
 				INFOPLIST_FILE = "forcaVerde/forcaVerde-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -416,6 +421,7 @@
 				GCC_PREFIX_HEADER = "forcaVerde/forcaVerde-Prefix.pch";
 				INFOPLIST_FILE = "forcaVerde/forcaVerde-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

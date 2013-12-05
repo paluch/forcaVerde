@@ -8,13 +8,15 @@
 
 #import "AppDelegate.h"
 #import "PagIniViewController.h"
+#import "MeuViewController.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    PagIniViewController *mvc = [[PagIniViewController alloc] init];
+    //PagIniViewController *mvc = [[PagIniViewController alloc] init];
+    MeuViewController *mvc = [[MeuViewController alloc] init];
     [[self window] setRootViewController:mvc];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];

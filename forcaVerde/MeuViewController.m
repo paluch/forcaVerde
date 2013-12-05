@@ -101,6 +101,7 @@
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
 {
     NSLog(@"didUpdateToLocation: %@", newLocation);
+    [self setDescriGPS:newLocation.description];
     CLLocation *currentLocation = newLocation;
     self.Descricao = newLocation.description;
     if (currentLocation != nil) {
@@ -109,5 +110,28 @@
         
         
     }
+}
+
+
+- (IBAction)enviar:(id)sender {
+    MFMailComposeViewController *composer = [[MFMailComposeViewController alloc] init];
+    [composer setMailComposeDelegate:self];
+    if([MFMailComposeViewController canSendMail]) {
+        [composer setToRecipients:[NSArray arrayWithObjects:@"paluch.tiago@gmail.com",nil]];
+        [composer setSubject:@"A nice subject"];
+        [composer setMessageBody:[self descriGPS] isHTML:NO];
+        [composer setModalTransitionStyle:UIModalTransitionStyleCrossDissolve];
+        
+        NSData *data = UIImageJPEGRepresentation(self.imageView.image,1);
+        [composer addAttachmentData:data  mimeType:@"image/jpeg" fileName:@"Photograph.jpg"];
+        
+        [self presentViewController:composer animated:YES completion:nil];
+    }
+}
+- (void)mailComposeController:(MFMailComposeViewController *)controller
+          didFinishWithResult:(MFMailComposeResult)result
+                        error:(NSError *)error
+{
+    [controller dismissViewControllerAnimated:YES completion:nil];
 }
 @end

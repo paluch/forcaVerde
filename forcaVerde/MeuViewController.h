@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
+#import <MessageUI/MessageUI.h>
 
-@interface MeuViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate,CLLocationManagerDelegate>
+@interface MeuViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate,CLLocationManagerDelegate, MFMailComposeViewControllerDelegate>
 {
     CLLocationManager *locationManager;
 }
@@ -19,5 +20,7 @@
 - (IBAction)selectPhoto:(id)sender;
 @property (weak, nonatomic) IBOutlet UILabel *longitudeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *latitudeLabel;
+@property (strong, nonatomic) NSString *descriGPS;
+- (IBAction)enviar:(id)sender;
 @property (weak,nonatomic) NSString *Descricao;
 @end
