@@ -112,7 +112,6 @@
     }
 }
 
-<<<<<<< HEAD
 
 - (IBAction)enviar:(id)sender {
     MFMailComposeViewController *composer = [[MFMailComposeViewController alloc] init];
@@ -134,10 +133,9 @@
                         error:(NSError *)error
 {
     [controller dismissViewControllerAnimated:YES completion:nil];
-=======
+}
 - (BOOL)prefersStatusBarHidden
 {
     return YES;
->>>>>>> 649c31000b166162885a97dd85bc5463e74ca044
 }
 @end
