@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import "PagIniViewController.h"
 #import "MeuViewController.h"
+#import "SelectTipoCrime.h"
+#import "TiposCrimes.h"
 
 @implementation AppDelegate
 
@@ -17,8 +19,25 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     //PagIniViewController *mvc = [[PagIniViewController alloc] init];
     MeuViewController *mvc = [[MeuViewController alloc] init];
-    [[self window] setRootViewController:mvc];
-    // Override point for customization after application launch.
+    PagIniViewController *pag = [[PagIniViewController alloc]init];
+    SelectTipoCrime *sel = [[SelectTipoCrime alloc]init];
+    TiposCrimes *tip = [[TiposCrimes alloc]init];
+    
+    
+    //[[self window] setRootViewController:mvc];
+   
+    
+    UITabBarController *tbc =[[UITabBarController alloc]init];
+    [tbc setViewControllers:@[mvc,pag,sel,tip]];
+    
+    [[self window]setRootViewController:tbc];
+    
+    [tbc.tabBar setBarTintColor:[UIColor colorWithRed:1 green:1 blue:0 alpha:0]];
+    [tbc.tabBar setBounds:CGRectMake(0.0, 0.0, self.window.bounds.size.width, 50.0)];
+    
+ 
+    
+    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;

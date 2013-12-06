@@ -11,7 +11,13 @@
 		EA5135BF184EAF0000AC3069 /* PagIniViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA5135BD184EAF0000AC3069 /* PagIniViewController.xib */; };
 		EA5135C3184EB0A900AC3069 /* SelectTipoCrime.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5135C1184EB0A900AC3069 /* SelectTipoCrime.m */; };
 		EA5135C4184EB0A900AC3069 /* SelectTipoCrime.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA5135C2184EB0A900AC3069 /* SelectTipoCrime.xib */; };
-		EA649C0B184E6BB9002308E1 /* TelaInicial.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA649C0A184E6BB9002308E1 /* TelaInicial.xib */; };
+		EA66B7E4185141850089EE54 /* infoCrimes.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA66B7E3185141850089EE54 /* infoCrimes.xib */; };
+		EA66B7E7185144470089EE54 /* infoCrimes.m in Sources */ = {isa = PBXBuildFile; fileRef = EA66B7E6185144470089EE54 /* infoCrimes.m */; };
+		EA66B7EA18514CBC0089EE54 /* filhotes.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EA66B7E918514CBC0089EE54 /* filhotes.jpg */; };
+		EA96EFA9185108C3000FF126 /* CrimesAmbientais.m in Sources */ = {isa = PBXBuildFile; fileRef = EA96EFA8185108C3000FF126 /* CrimesAmbientais.m */; };
+		EA96EFAD18510984000FF126 /* GCrimesAmbientais.m in Sources */ = {isa = PBXBuildFile; fileRef = EA96EFAC18510984000FF126 /* GCrimesAmbientais.m */; };
+		EA96EFB118510F40000FF126 /* TiposCrimes.m in Sources */ = {isa = PBXBuildFile; fileRef = EA96EFAF18510F40000FF126 /* TiposCrimes.m */; };
+		EA96EFB218510F40000FF126 /* TiposCrimes.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA96EFB018510F40000FF126 /* TiposCrimes.xib */; };
 		FF26A6281850EB24005A5472 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF26A6271850EB24005A5472 /* MessageUI.framework */; };
 		FFC7DCEA184E52E000A766B3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFC7DCE9184E52E000A766B3 /* Foundation.framework */; };
 		FFC7DCEC184E52E000A766B3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFC7DCEB184E52E000A766B3 /* CoreGraphics.framework */; };
@@ -47,7 +53,17 @@
 		EA5135C0184EB0A900AC3069 /* SelectTipoCrime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectTipoCrime.h; sourceTree = "<group>"; };
 		EA5135C1184EB0A900AC3069 /* SelectTipoCrime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectTipoCrime.m; sourceTree = "<group>"; };
 		EA5135C2184EB0A900AC3069 /* SelectTipoCrime.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectTipoCrime.xib; sourceTree = "<group>"; };
-		EA649C0A184E6BB9002308E1 /* TelaInicial.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TelaInicial.xib; sourceTree = "<group>"; };
+		EA66B7E3185141850089EE54 /* infoCrimes.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = infoCrimes.xib; sourceTree = "<group>"; };
+		EA66B7E5185144470089EE54 /* infoCrimes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = infoCrimes.h; sourceTree = "<group>"; };
+		EA66B7E6185144470089EE54 /* infoCrimes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = infoCrimes.m; sourceTree = "<group>"; };
+		EA66B7E918514CBC0089EE54 /* filhotes.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = filhotes.jpg; sourceTree = "<group>"; };
+		EA96EFA7185108C3000FF126 /* CrimesAmbientais.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CrimesAmbientais.h; path = forcaVerde/CrimesAmbientais.h; sourceTree = "<group>"; };
+		EA96EFA8185108C3000FF126 /* CrimesAmbientais.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CrimesAmbientais.m; path = forcaVerde/CrimesAmbientais.m; sourceTree = "<group>"; };
+		EA96EFAB18510984000FF126 /* GCrimesAmbientais.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCrimesAmbientais.h; sourceTree = "<group>"; };
+		EA96EFAC18510984000FF126 /* GCrimesAmbientais.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCrimesAmbientais.m; sourceTree = "<group>"; };
+		EA96EFAE18510F40000FF126 /* TiposCrimes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TiposCrimes.h; sourceTree = "<group>"; };
+		EA96EFAF18510F40000FF126 /* TiposCrimes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TiposCrimes.m; sourceTree = "<group>"; };
+		EA96EFB018510F40000FF126 /* TiposCrimes.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TiposCrimes.xib; sourceTree = "<group>"; };
 		FF26A6271850EB24005A5472 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		FFC7DCE6184E52E000A766B3 /* forcaVerde.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = forcaVerde.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFC7DCE9184E52E000A766B3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -97,9 +113,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EA66B7E818514C550089EE54 /* imagens */ = {
+			isa = PBXGroup;
+			children = (
+				EA66B7E918514CBC0089EE54 /* filhotes.jpg */,
+			);
+			name = imagens;
+			sourceTree = "<group>";
+		};
+		EA96EFAA185108C7000FF126 /* modelos */ = {
+			isa = PBXGroup;
+			children = (
+				EA96EFA7185108C3000FF126 /* CrimesAmbientais.h */,
+				EA96EFA8185108C3000FF126 /* CrimesAmbientais.m */,
+				EA96EFAB18510984000FF126 /* GCrimesAmbientais.h */,
+				EA96EFAC18510984000FF126 /* GCrimesAmbientais.m */,
+			);
+			name = modelos;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		FFC7DCDD184E52E000A766B3 = {
 			isa = PBXGroup;
 			children = (
+				EA66B7E818514C550089EE54 /* imagens */,
 				FFC7DCEF184E52E000A766B3 /* forcaVerde */,
 				FFC7DD08184E52E000A766B3 /* forcaVerdeTests */,
 				FFC7DCE8184E52E000A766B3 /* Frameworks */,
@@ -145,7 +182,13 @@
 				FFC7DD18184E533400A766B3 /* MeuViewController.h */,
 				FFC7DD19184E533400A766B3 /* MeuViewController.m */,
 				FFC7DD1A184E533400A766B3 /* MeuViewController.xib */,
-				EA649C0A184E6BB9002308E1 /* TelaInicial.xib */,
+				EA96EFAE18510F40000FF126 /* TiposCrimes.h */,
+				EA96EFAF18510F40000FF126 /* TiposCrimes.m */,
+				EA96EFB018510F40000FF126 /* TiposCrimes.xib */,
+				EA66B7E5185144470089EE54 /* infoCrimes.h */,
+				EA66B7E6185144470089EE54 /* infoCrimes.m */,
+				EA66B7E3185141850089EE54 /* infoCrimes.xib */,
+				EA96EFAA185108C7000FF126 /* modelos */,
 			);
 			path = forcaVerde;
 			sourceTree = "<group>";
@@ -255,11 +298,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA5135C4184EB0A900AC3069 /* SelectTipoCrime.xib in Resources */,
+				EA66B7EA18514CBC0089EE54 /* filhotes.jpg in Resources */,
 				FFC7DCF4184E52E000A766B3 /* InfoPlist.strings in Resources */,
 				FFC7DD1C184E533400A766B3 /* MeuViewController.xib in Resources */,
 				FFC7DCFC184E52E000A766B3 /* Images.xcassets in Resources */,
+				EA96EFB218510F40000FF126 /* TiposCrimes.xib in Resources */,
+				EA66B7E4185141850089EE54 /* infoCrimes.xib in Resources */,
 				EA5135BF184EAF0000AC3069 /* PagIniViewController.xib in Resources */,
-				EA649C0B184E6BB9002308E1 /* TelaInicial.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,8 +325,12 @@
 			files = (
 				EA5135BE184EAF0000AC3069 /* PagIniViewController.m in Sources */,
 				EA5135C3184EB0A900AC3069 /* SelectTipoCrime.m in Sources */,
+				EA96EFB118510F40000FF126 /* TiposCrimes.m in Sources */,
 				FFC7DCFA184E52E000A766B3 /* AppDelegate.m in Sources */,
+				EA96EFA9185108C3000FF126 /* CrimesAmbientais.m in Sources */,
+				EA96EFAD18510984000FF126 /* GCrimesAmbientais.m in Sources */,
 				FFC7DD1B184E533400A766B3 /* MeuViewController.m in Sources */,
+				EA66B7E7185144470089EE54 /* infoCrimes.m in Sources */,
 				FFC7DCF6184E52E000A766B3 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

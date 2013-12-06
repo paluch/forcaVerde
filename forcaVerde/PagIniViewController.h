@@ -9,8 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface PagIniViewController : UIViewController
-- (IBAction)denuncia:(id)sender;
-- (IBAction)CA:(id)sender;
-- (IBAction)MPM:(id)sender;
+
 
 @end

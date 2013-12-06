@@ -25,7 +25,11 @@
     if (self) {
         opcaoAtual = 0;
  
-        Crimes = [[NSMutableArray alloc]initWithObjects:@"crime 1 ",@"crime 2", @"crime 3",@"crime 4", nil];
+        Crimes = [[NSMutableArray alloc]initWithObjects:@"contra a Fauna",@"contra a Flora ", @"Poluição e outros",@"Contra Ordenamento Urbano", @"contra a Administração Ambiental", nil];
+        
+        [self.tabBarItem setTitle:@"Denuncia"];
+        [self.tabBarItem setImage:nil];
+        
         
     }
     return self;
