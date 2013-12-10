@@ -25,6 +25,8 @@
 		EA96EFAD18510984000FF126 /* GCrimesAmbientais.m in Sources */ = {isa = PBXBuildFile; fileRef = EA96EFAC18510984000FF126 /* GCrimesAmbientais.m */; };
 		EA96EFB118510F40000FF126 /* TiposCrimes.m in Sources */ = {isa = PBXBuildFile; fileRef = EA96EFAF18510F40000FF126 /* TiposCrimes.m */; };
 		EA96EFB218510F40000FF126 /* TiposCrimes.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA96EFB018510F40000FF126 /* TiposCrimes.xib */; };
+		FF19A0BA18579B44006B59A6 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF19A0B918579B44006B59A6 /* MapKit.framework */; };
+		FF19A0BD18579EB5006B59A6 /* Anotacao.m in Sources */ = {isa = PBXBuildFile; fileRef = FF19A0BC18579EB5006B59A6 /* Anotacao.m */; };
 		FF26A6281850EB24005A5472 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF26A6271850EB24005A5472 /* MessageUI.framework */; };
 		FFC7DCEA184E52E000A766B3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFC7DCE9184E52E000A766B3 /* Foundation.framework */; };
 		FFC7DCEC184E52E000A766B3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFC7DCEB184E52E000A766B3 /* CoreGraphics.framework */; };
@@ -83,6 +85,9 @@
 		EA96EFAE18510F40000FF126 /* TiposCrimes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TiposCrimes.h; sourceTree = "<group>"; };
 		EA96EFAF18510F40000FF126 /* TiposCrimes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TiposCrimes.m; sourceTree = "<group>"; };
 		EA96EFB018510F40000FF126 /* TiposCrimes.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TiposCrimes.xib; sourceTree = "<group>"; };
+		FF19A0B918579B44006B59A6 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		FF19A0BB18579EB5006B59A6 /* Anotacao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Anotacao.h; sourceTree = "<group>"; };
+		FF19A0BC18579EB5006B59A6 /* Anotacao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Anotacao.m; sourceTree = "<group>"; };
 		FF26A6271850EB24005A5472 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		FFC7DCE6184E52E000A766B3 /* forcaVerde.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = forcaVerde.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFC7DCE9184E52E000A766B3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -112,6 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF19A0BA18579B44006B59A6 /* MapKit.framework in Frameworks */,
 				FFC7DCEC184E52E000A766B3 /* CoreGraphics.framework in Frameworks */,
 				FFC7DCEE184E52E000A766B3 /* UIKit.framework in Frameworks */,
 				FFC7DCEA184E52E000A766B3 /* Foundation.framework in Frameworks */,
@@ -182,6 +188,7 @@
 		FFC7DCE8184E52E000A766B3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FF19A0B918579B44006B59A6 /* MapKit.framework */,
 				FF26A6271850EB24005A5472 /* MessageUI.framework */,
 				FFC7DD1D184E562C00A766B3 /* CoreLocation.framework */,
 				FFC7DCE9184E52E000A766B3 /* Foundation.framework */,
@@ -221,6 +228,8 @@
 				EA4E791B185687EC00C2B619 /* infoPol.m */,
 				EA4E791C185687EC00C2B619 /* infoPol.xib */,
 				EA96EFAA185108C7000FF126 /* modelos */,
+				FF19A0BB18579EB5006B59A6 /* Anotacao.h */,
+				FF19A0BC18579EB5006B59A6 /* Anotacao.m */,
 			);
 			path = forcaVerde;
 			sourceTree = "<group>";
@@ -370,6 +379,7 @@
 				FFC7DD1B184E533400A766B3 /* MeuViewController.m in Sources */,
 				EA4E791D185687EC00C2B619 /* infoPol.m in Sources */,
 				EA66B7E7185144470089EE54 /* infoCrimes.m in Sources */,
+				FF19A0BD18579EB5006B59A6 /* Anotacao.m in Sources */,
 				EA4E7919185682FE00C2B619 /* GPoliciaMilitar.m in Sources */,
 				FFC7DCF6184E52E000A766B3 /* main.m in Sources */,
 			);

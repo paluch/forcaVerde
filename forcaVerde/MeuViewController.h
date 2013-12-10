@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
 #import <MessageUI/MessageUI.h>
+#import <MapKit/MapKit.h>
 
 @interface MeuViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate,CLLocationManagerDelegate, MFMailComposeViewControllerDelegate>
 {
@@ -22,5 +23,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *latitudeLabel;
 @property (strong, nonatomic) NSString *descriGPS;
 - (IBAction)enviar:(id)sender;
+@property (weak, nonatomic) IBOutlet MKMapView *meuMapView;
 @property (weak,nonatomic) NSString *Descricao;
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "MeuViewController.h"
+#import "Anotacao.h"
 
 @interface MeuViewController ()
 
@@ -33,7 +34,7 @@
     [super viewDidLoad];
     locationManager.delegate = self;
     locationManager.desiredAccuracy = kCLLocationAccuracyBest;
-    [locationManager startUpdatingLocation];
+    //[locationManager startUpdatingLocation];
     // Do any additional setup after loading the view from its nib.
     
   
@@ -107,8 +108,13 @@
     if (currentLocation != nil) {
         self.longitudeLabel.text = [NSString stringWithFormat:@"%.8f", currentLocation.coordinate.longitude];
         self.latitudeLabel.text = [NSString stringWithFormat:@"%.8f", currentLocation.coordinate.latitude];
-        
-        
+        CLLocationCoordinate2D cld = CLLocationCoordinate2DMake(currentLocation.coordinate.latitude, currentLocation.coordinate.longitude);
+        [[self meuMapView] setCenterCoordinate:cld animated:YES];
+        Anotacao *addAnnotation = [[Anotacao alloc] initWithTitle:@"teste" andCoordinate:cld];
+        [[self meuMapView] addAnnotation:addAnnotation];
+        MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(cld, 500, 500);
+        MKCoordinateRegion adjustedRegion = [self.meuMapView regionThatFits:viewRegion];
+        [self.meuMapView setRegion:adjustedRegion animated:YES];
     }
 }
 
@@ -122,8 +128,16 @@
         [composer setMessageBody:[self descriGPS] isHTML:NO];
         [composer setModalTransitionStyle:UIModalTransitionStyleCrossDissolve];
         
+        UIGraphicsBeginImageContext(self.meuMapView.frame.size);
+        [self.meuMapView.layer renderInContext:UIGraphicsGetCurrentContext()];
+        UIImage *mapImage = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        
+        
         NSData *data = UIImageJPEGRepresentation(self.imageView.image,1);
+        NSData *datm = UIImageJPEGRepresentation(mapImage,1);
         [composer addAttachmentData:data  mimeType:@"image/jpeg" fileName:@"Photograph.jpg"];
+        [composer addAttachmentData:datm  mimeType:@"image/jpeg" fileName:@"mapa.jpg"];
         
         [self presentViewController:composer animated:YES completion:nil];
     }

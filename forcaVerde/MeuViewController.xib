@@ -9,6 +9,7 @@
                 <outlet property="imageView" destination="laz-cL-Vh8" id="3YF-s4-CS2"/>
                 <outlet property="latitudeLabel" destination="ihY-gR-gHm" id="qQI-gw-niJ"/>
                 <outlet property="longitudeLabel" destination="pPu-YG-NNO" id="a1o-ZW-PqU"/>
+                <outlet property="meuMapView" destination="48g-M8-FBb" id="cst-yw-7Db"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
         </placeholder>
@@ -66,6 +67,10 @@
                         <action selector="enviar:" destination="-1" eventType="touchUpInside" id="ele-N0-bdy"/>
                     </connections>
                 </button>
+                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="48g-M8-FBb">
+                    <rect key="frame" x="40" y="428" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                </mapView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
