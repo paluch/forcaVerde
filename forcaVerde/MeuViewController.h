@@ -25,4 +25,9 @@
 - (IBAction)enviar:(id)sender;
 @property (weak, nonatomic) IBOutlet MKMapView *meuMapView;
 @property (weak,nonatomic) NSString *Descricao;
+@property (strong,nonatomic) NSString *Logradouro;
+
+@property (strong,nonatomic) NSString *Cidade;
+@property (weak,nonatomic) NSString *tema;
+@property (weak,nonatomic) NSString *outro;
 @end

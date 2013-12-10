@@ -115,6 +115,31 @@
         MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(cld, 500, 500);
         MKCoordinateRegion adjustedRegion = [self.meuMapView regionThatFits:viewRegion];
         [self.meuMapView setRegion:adjustedRegion animated:YES];
+        
+        CLGeocoder *reverseGeocoder = [[CLGeocoder alloc] init];
+        
+        [reverseGeocoder reverseGeocodeLocation:currentLocation completionHandler:^(NSArray *placemarks, NSError *error)
+         {
+             NSLog(@"reverseGeocodeLocation:completionHandler: Completion Handler called!");
+             if (error){
+                 NSLog(@"Geocode failed with error: %@", error);
+                 return;
+             }
+             
+             NSLog(@"Received placemarks: %@", placemarks);
+             
+             
+             CLPlacemark *myPlacemark = [placemarks objectAtIndex:0];
+             NSString *city = myPlacemark.locality;
+             NSString *countryName = [[NSString alloc] initWithFormat:@"Cidade: %@ e endereco: %@", city, myPlacemark.description];
+             
+             
+             [self setCidade:city];
+             
+             [self setLogradouro:countryName];
+         }];
+        
+        
     }
 }
 
@@ -124,8 +149,12 @@
     [composer setMailComposeDelegate:self];
     if([MFMailComposeViewController canSendMail]) {
         [composer setToRecipients:[NSArray arrayWithObjects:@"paluch.tiago@gmail.com",nil]];
-        [composer setSubject:@"A nice subject"];
-        [composer setMessageBody:[self descriGPS] isHTML:NO];
+        [composer setSubject:[self Cidade]];
+        
+        NSString *corpo = [[NSString alloc] initWithFormat:@"%@ \n %@",[self Logradouro],[self descriGPS]];
+        
+        [composer setMessageBody:corpo isHTML:NO];
+        
         [composer setModalTransitionStyle:UIModalTransitionStyleCrossDissolve];
         
         UIGraphicsBeginImageContext(self.meuMapView.frame.size);
