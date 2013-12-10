@@ -298,9 +298,6 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Tiago Paluch";
 				TargetAttributes = {
-					FFC7DCE5184E52E000A766B3 = {
-						DevelopmentTeam = CMC7TGB9WM;
-					};
 					FFC7DD00184E52E000A766B3 = {
 						TestTargetID = FFC7DCE5184E52E000A766B3;
 					};
