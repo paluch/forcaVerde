@@ -21,7 +21,7 @@
         locationManager = [[CLLocationManager alloc] init];
         
         [self.view addSubview: [self telaInicial]];
-        
+        [self setTitle:@"Denuncia"];
     
     }
     return self;

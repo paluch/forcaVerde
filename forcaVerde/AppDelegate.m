@@ -21,7 +21,7 @@
     //PagIniViewController *mvc = [[PagIniViewController alloc] init];
     MeuViewController *mvc = [[MeuViewController alloc] init];
     PagIniViewController *pag = [[PagIniViewController alloc]init];
-    SelectTipoCrime *sel = [[SelectTipoCrime alloc]init];
+    //SelectTipoCrime *sel = [[SelectTipoCrime alloc]init];
     TiposCrimes *tip = [[TiposCrimes alloc]init];
     MaisInfoPolViewController *po = [[MaisInfoPolViewController alloc]init];
     
@@ -29,7 +29,7 @@
    
     
     UITabBarController *tbc =[[UITabBarController alloc]init];
-    [tbc setViewControllers:@[pag,sel,tip,po]];
+    [tbc setViewControllers:@[pag,mvc,tip,po]];
     
     [[self window]setRootViewController:tbc];
     
