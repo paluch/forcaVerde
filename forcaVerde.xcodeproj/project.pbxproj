@@ -40,6 +40,7 @@
 		FFC7DD1B184E533400A766B3 /* MeuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFC7DD19184E533400A766B3 /* MeuViewController.m */; };
 		FFC7DD1C184E533400A766B3 /* MeuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFC7DD1A184E533400A766B3 /* MeuViewController.xib */; };
 		FFC7DD1E184E562C00A766B3 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFC7DD1D184E562C00A766B3 /* CoreLocation.framework */; };
+		FFDEB6C118578217002AA22A /* BPFlo_PMPR.PNG in Resources */ = {isa = PBXBuildFile; fileRef = FFDEB6C018578217002AA22A /* BPFlo_PMPR.PNG */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +102,7 @@
 		FFC7DD19184E533400A766B3 /* MeuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeuViewController.m; sourceTree = "<group>"; };
 		FFC7DD1A184E533400A766B3 /* MeuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MeuViewController.xib; sourceTree = "<group>"; };
 		FFC7DD1D184E562C00A766B3 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		FFDEB6C018578217002AA22A /* BPFlo_PMPR.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BPFlo_PMPR.PNG; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 		EA66B7E818514C550089EE54 /* imagens */ = {
 			isa = PBXGroup;
 			children = (
+				FFDEB6C018578217002AA22A /* BPFlo_PMPR.PNG */,
 				EA66B7E918514CBC0089EE54 /* filhotes.jpg */,
 			);
 			name = imagens;
@@ -295,6 +298,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Tiago Paluch";
 				TargetAttributes = {
+					FFC7DCE5184E52E000A766B3 = {
+						DevelopmentTeam = CMC7TGB9WM;
+					};
 					FFC7DD00184E52E000A766B3 = {
 						TestTargetID = FFC7DCE5184E52E000A766B3;
 					};
@@ -329,6 +335,7 @@
 				FFC7DCF4184E52E000A766B3 /* InfoPlist.strings in Resources */,
 				FFC7DD1C184E533400A766B3 /* MeuViewController.xib in Resources */,
 				FFC7DCFC184E52E000A766B3 /* Images.xcassets in Resources */,
+				FFDEB6C118578217002AA22A /* BPFlo_PMPR.PNG in Resources */,
 				EA4E7913185677F200C2B619 /* MaisInfoPolViewController.xib in Resources */,
 				EA96EFB218510F40000FF126 /* TiposCrimes.xib in Resources */,
 				EA66B7E4185141850089EE54 /* infoCrimes.xib in Resources */,
@@ -484,9 +491,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "forcaVerde/forcaVerde-Prefix.pch";
 				INFOPLIST_FILE = "forcaVerde/forcaVerde-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
@@ -498,9 +507,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "forcaVerde/forcaVerde-Prefix.pch";
 				INFOPLIST_FILE = "forcaVerde/forcaVerde-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
