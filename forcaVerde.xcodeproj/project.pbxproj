@@ -20,6 +20,7 @@
 		EA66B7E4185141850089EE54 /* infoCrimes.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA66B7E3185141850089EE54 /* infoCrimes.xib */; };
 		EA66B7E7185144470089EE54 /* infoCrimes.m in Sources */ = {isa = PBXBuildFile; fileRef = EA66B7E6185144470089EE54 /* infoCrimes.m */; };
 		EA66B7EA18514CBC0089EE54 /* filhotes.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EA66B7E918514CBC0089EE54 /* filhotes.jpg */; };
+		EA7EF0A318578A5500875056 /* jaguatirica-e1358515997707.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EA7EF0A218578A5500875056 /* jaguatirica-e1358515997707.jpg */; };
 		EA96EFA9185108C3000FF126 /* CrimesAmbientais.m in Sources */ = {isa = PBXBuildFile; fileRef = EA96EFA8185108C3000FF126 /* CrimesAmbientais.m */; };
 		EA96EFAD18510984000FF126 /* GCrimesAmbientais.m in Sources */ = {isa = PBXBuildFile; fileRef = EA96EFAC18510984000FF126 /* GCrimesAmbientais.m */; };
 		EA96EFB118510F40000FF126 /* TiposCrimes.m in Sources */ = {isa = PBXBuildFile; fileRef = EA96EFAF18510F40000FF126 /* TiposCrimes.m */; };
@@ -74,6 +75,7 @@
 		EA66B7E5185144470089EE54 /* infoCrimes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = infoCrimes.h; sourceTree = "<group>"; };
 		EA66B7E6185144470089EE54 /* infoCrimes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = infoCrimes.m; sourceTree = "<group>"; };
 		EA66B7E918514CBC0089EE54 /* filhotes.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = filhotes.jpg; sourceTree = "<group>"; };
+		EA7EF0A218578A5500875056 /* jaguatirica-e1358515997707.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "jaguatirica-e1358515997707.jpg"; sourceTree = "<group>"; };
 		EA96EFA7185108C3000FF126 /* CrimesAmbientais.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CrimesAmbientais.h; path = forcaVerde/CrimesAmbientais.h; sourceTree = "<group>"; };
 		EA96EFA8185108C3000FF126 /* CrimesAmbientais.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CrimesAmbientais.m; path = forcaVerde/CrimesAmbientais.m; sourceTree = "<group>"; };
 		EA96EFAB18510984000FF126 /* GCrimesAmbientais.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCrimesAmbientais.h; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 		EA66B7E818514C550089EE54 /* imagens */ = {
 			isa = PBXGroup;
 			children = (
+				EA7EF0A218578A5500875056 /* jaguatirica-e1358515997707.jpg */,
 				FFDEB6C018578217002AA22A /* BPFlo_PMPR.PNG */,
 				EA66B7E918514CBC0089EE54 /* filhotes.jpg */,
 			);
@@ -328,6 +331,7 @@
 			files = (
 				EA5135C4184EB0A900AC3069 /* SelectTipoCrime.xib in Resources */,
 				EA4E791E185687EC00C2B619 /* infoPol.xib in Resources */,
+				EA7EF0A318578A5500875056 /* jaguatirica-e1358515997707.jpg in Resources */,
 				EA66B7EA18514CBC0089EE54 /* filhotes.jpg in Resources */,
 				FFC7DCF4184E52E000A766B3 /* InfoPlist.strings in Resources */,
 				FFC7DD1C184E533400A766B3 /* MeuViewController.xib in Resources */,

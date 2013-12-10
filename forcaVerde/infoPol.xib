@@ -7,6 +7,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="infoPol">
             <connections>
                 <outlet property="End" destination="7s0-Yk-dpZ" id="Y3h-9Q-CCt"/>
+                <outlet property="email" destination="E91-rh-ITy" id="Rkl-Xl-cy5"/>
                 <outlet property="tel" destination="wUB-An-KDp" id="cfe-z3-3LZ"/>
                 <outlet property="unidade" destination="VL8-0m-jUQ" id="38t-gP-RaH"/>
                 <outlet property="view" destination="1" id="5r9-81-4Tr"/>
@@ -52,6 +53,13 @@
                         <action selector="voltar:" destination="-1" eventType="touchUpInside" id="txy-Mx-iam"/>
                     </connections>
                 </button>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E91-rh-ITy">
+                    <rect key="frame" x="20" y="431" width="280" height="43"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>

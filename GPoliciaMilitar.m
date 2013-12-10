@@ -30,7 +30,7 @@
     self = [super init];
     if (self) {
         unidades = [[NSMutableArray alloc]init];
-        PoliciaMilitar *uni1 = [[PoliciaMilitar alloc]initWithName:@"12º BATALHÃO DE POLÍCIA MILITAR" Cidade:@"Curitiba" telefone:@"(41) 3269-8100 Fax: 3269-2110" endereço:@" Rua Curupaitis, 1132 - Santa Quitéria. CEP 80.310-180"];
+        PoliciaMilitar *uni1 = [[PoliciaMilitar alloc]initWithName:@"BATALHÃO DE POLÍCIA AMBIENTAL" Cidade:@"Curitiba" telefone:@"0800 643 0304" endereço:@"Avenida das Torres,10.000, Parque Metropolitano do Iguaçu. CEP: 83.040-300 " email: @"bpambfv@pm.pr.gov.br"];
         [unidades addObject: uni1];
   
         

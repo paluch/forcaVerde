@@ -19,6 +19,7 @@
     [[self unidade] setText:[unidades Nome]];
     [[self tel]setText:[unidades tel]];
     [[self End]setText:[unidades end]];
+    [[self email]setText:[unidades email]];
 }
 - (void)didReceiveMemoryWarning
 {

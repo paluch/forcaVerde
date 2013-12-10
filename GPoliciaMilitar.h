@@ -18,7 +18,7 @@
 
 -(NSArray *) TodasUnidades;
 
-- (void)initWithName:(NSString *)n Cidade:(NSString *)c telefone:(NSString *)t endereço:(NSString *)e;
+- (void)initWithName:(NSString *)n Cidade:(NSString *)c telefone:(NSString *)t endereço:(NSString *)e email:(NSString *)em;
 - (void)selectUnidade:(NSIndexPath *)i;
 
 

@@ -16,6 +16,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *unidade;
 @property (weak, nonatomic) IBOutlet UILabel *tel;
 @property (weak, nonatomic) IBOutlet UILabel *End;
+@property (weak, nonatomic) IBOutlet UILabel *email;
+
 - (IBAction)voltar:(id)sender;
 
 
