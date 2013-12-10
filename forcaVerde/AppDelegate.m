@@ -11,6 +11,7 @@
 #import "MeuViewController.h"
 #import "SelectTipoCrime.h"
 #import "TiposCrimes.h"
+#import "MaisInfoPolViewController.h"
 
 @implementation AppDelegate
 
@@ -22,13 +23,13 @@
     PagIniViewController *pag = [[PagIniViewController alloc]init];
     SelectTipoCrime *sel = [[SelectTipoCrime alloc]init];
     TiposCrimes *tip = [[TiposCrimes alloc]init];
-    
+    MaisInfoPolViewController *po = [[MaisInfoPolViewController alloc]init];
     
     //[[self window] setRootViewController:mvc];
    
     
     UITabBarController *tbc =[[UITabBarController alloc]init];
-    [tbc setViewControllers:@[mvc,pag,sel,tip]];
+    [tbc setViewControllers:@[pag,sel,tip,po]];
     
     [[self window]setRootViewController:tbc];
     

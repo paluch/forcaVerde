@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA4E7912185677F200C2B619 /* MaisInfoPolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4E7910185677F200C2B619 /* MaisInfoPolViewController.m */; };
+		EA4E7913185677F200C2B619 /* MaisInfoPolViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA4E7911185677F200C2B619 /* MaisInfoPolViewController.xib */; };
+		EA4E79161856813E00C2B619 /* PoliciaMilitar.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4E79151856813E00C2B619 /* PoliciaMilitar.m */; };
+		EA4E7919185682FE00C2B619 /* GPoliciaMilitar.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4E7918185682FE00C2B619 /* GPoliciaMilitar.m */; };
+		EA4E791D185687EC00C2B619 /* infoPol.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4E791B185687EC00C2B619 /* infoPol.m */; };
+		EA4E791E185687EC00C2B619 /* infoPol.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA4E791C185687EC00C2B619 /* infoPol.xib */; };
 		EA5135BE184EAF0000AC3069 /* PagIniViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5135BC184EAF0000AC3069 /* PagIniViewController.m */; };
 		EA5135BF184EAF0000AC3069 /* PagIniViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA5135BD184EAF0000AC3069 /* PagIniViewController.xib */; };
 		EA5135C3184EB0A900AC3069 /* SelectTipoCrime.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5135C1184EB0A900AC3069 /* SelectTipoCrime.m */; };
@@ -47,6 +53,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EA4E790F185677F200C2B619 /* MaisInfoPolViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaisInfoPolViewController.h; sourceTree = "<group>"; };
+		EA4E7910185677F200C2B619 /* MaisInfoPolViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaisInfoPolViewController.m; sourceTree = "<group>"; };
+		EA4E7911185677F200C2B619 /* MaisInfoPolViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MaisInfoPolViewController.xib; sourceTree = "<group>"; };
+		EA4E79141856813E00C2B619 /* PoliciaMilitar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoliciaMilitar.h; sourceTree = "<group>"; };
+		EA4E79151856813E00C2B619 /* PoliciaMilitar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PoliciaMilitar.m; sourceTree = "<group>"; };
+		EA4E7917185682FE00C2B619 /* GPoliciaMilitar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPoliciaMilitar.h; sourceTree = "<group>"; };
+		EA4E7918185682FE00C2B619 /* GPoliciaMilitar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPoliciaMilitar.m; sourceTree = "<group>"; };
+		EA4E791A185687EC00C2B619 /* infoPol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = infoPol.h; sourceTree = "<group>"; };
+		EA4E791B185687EC00C2B619 /* infoPol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = infoPol.m; sourceTree = "<group>"; };
+		EA4E791C185687EC00C2B619 /* infoPol.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = infoPol.xib; sourceTree = "<group>"; };
 		EA5135BB184EAF0000AC3069 /* PagIniViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PagIniViewController.h; sourceTree = "<group>"; };
 		EA5135BC184EAF0000AC3069 /* PagIniViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PagIniViewController.m; sourceTree = "<group>"; };
 		EA5135BD184EAF0000AC3069 /* PagIniViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PagIniViewController.xib; sourceTree = "<group>"; };
@@ -128,6 +144,10 @@
 				EA96EFA8185108C3000FF126 /* CrimesAmbientais.m */,
 				EA96EFAB18510984000FF126 /* GCrimesAmbientais.h */,
 				EA96EFAC18510984000FF126 /* GCrimesAmbientais.m */,
+				EA4E79141856813E00C2B619 /* PoliciaMilitar.h */,
+				EA4E79151856813E00C2B619 /* PoliciaMilitar.m */,
+				EA4E7917185682FE00C2B619 /* GPoliciaMilitar.h */,
+				EA4E7918185682FE00C2B619 /* GPoliciaMilitar.m */,
 			);
 			name = modelos;
 			path = ..;
@@ -188,6 +208,12 @@
 				EA66B7E5185144470089EE54 /* infoCrimes.h */,
 				EA66B7E6185144470089EE54 /* infoCrimes.m */,
 				EA66B7E3185141850089EE54 /* infoCrimes.xib */,
+				EA4E790F185677F200C2B619 /* MaisInfoPolViewController.h */,
+				EA4E7910185677F200C2B619 /* MaisInfoPolViewController.m */,
+				EA4E7911185677F200C2B619 /* MaisInfoPolViewController.xib */,
+				EA4E791A185687EC00C2B619 /* infoPol.h */,
+				EA4E791B185687EC00C2B619 /* infoPol.m */,
+				EA4E791C185687EC00C2B619 /* infoPol.xib */,
 				EA96EFAA185108C7000FF126 /* modelos */,
 			);
 			path = forcaVerde;
@@ -298,10 +324,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA5135C4184EB0A900AC3069 /* SelectTipoCrime.xib in Resources */,
+				EA4E791E185687EC00C2B619 /* infoPol.xib in Resources */,
 				EA66B7EA18514CBC0089EE54 /* filhotes.jpg in Resources */,
 				FFC7DCF4184E52E000A766B3 /* InfoPlist.strings in Resources */,
 				FFC7DD1C184E533400A766B3 /* MeuViewController.xib in Resources */,
 				FFC7DCFC184E52E000A766B3 /* Images.xcassets in Resources */,
+				EA4E7913185677F200C2B619 /* MaisInfoPolViewController.xib in Resources */,
 				EA96EFB218510F40000FF126 /* TiposCrimes.xib in Resources */,
 				EA66B7E4185141850089EE54 /* infoCrimes.xib in Resources */,
 				EA5135BF184EAF0000AC3069 /* PagIniViewController.xib in Resources */,
@@ -327,10 +355,14 @@
 				EA5135C3184EB0A900AC3069 /* SelectTipoCrime.m in Sources */,
 				EA96EFB118510F40000FF126 /* TiposCrimes.m in Sources */,
 				FFC7DCFA184E52E000A766B3 /* AppDelegate.m in Sources */,
+				EA4E79161856813E00C2B619 /* PoliciaMilitar.m in Sources */,
+				EA4E7912185677F200C2B619 /* MaisInfoPolViewController.m in Sources */,
 				EA96EFA9185108C3000FF126 /* CrimesAmbientais.m in Sources */,
 				EA96EFAD18510984000FF126 /* GCrimesAmbientais.m in Sources */,
 				FFC7DD1B184E533400A766B3 /* MeuViewController.m in Sources */,
+				EA4E791D185687EC00C2B619 /* infoPol.m in Sources */,
 				EA66B7E7185144470089EE54 /* infoCrimes.m in Sources */,
+				EA4E7919185682FE00C2B619 /* GPoliciaMilitar.m in Sources */,
 				FFC7DCF6184E52E000A766B3 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
