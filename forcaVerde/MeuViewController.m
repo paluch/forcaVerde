@@ -8,6 +8,8 @@
 
 #import "MeuViewController.h"
 #import "Anotacao.h"
+#import "denuncia.h"
+#import "banco.h"
 
 @interface MeuViewController ()
 
@@ -136,7 +138,7 @@
              
              [self setCidade:city];
              [self setLogradouro:countryName];
-             [[UIApplication sharedApplication] setApplicationIconBadgeNumber:1];
+             
          }];
         
         
@@ -145,6 +147,7 @@
 
 
 - (IBAction)enviar:(id)sender {
+    
     MFMailComposeViewController *composer = [[MFMailComposeViewController alloc] init];
     [composer setMailComposeDelegate:self];
     if([MFMailComposeViewController canSendMail]) {

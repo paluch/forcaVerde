@@ -12,6 +12,7 @@
 #import "SelectTipoCrime.h"
 #import "TiposCrimes.h"
 #import "MaisInfoPolViewController.h"
+#import "banco.h"
 
 @implementation AppDelegate
 
@@ -38,7 +39,7 @@
     
  
     
-    
+    [[UIApplication sharedApplication] setApplicationIconBadgeNumber:[[banco meuBanco] tamanhoDoBanco]];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;

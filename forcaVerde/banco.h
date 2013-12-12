@@ -22,5 +22,7 @@
 - (NSArray *)itens;
 - (BOOL) saveData:(denuncia *)den;
 - (BOOL) removeData:(denuncia *)den;
+- (int) tamanhoDoBanco;
+
 
 @end

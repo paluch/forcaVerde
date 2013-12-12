@@ -132,6 +132,9 @@
     
     return state;
 }
+- (int)tamanhoDoBanco {
+    return [[self itens] count];
+}
 
 - (BOOL)removeData:(denuncia *)den
 {
