@@ -43,6 +43,9 @@
 		FFC7DD1B184E533400A766B3 /* MeuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFC7DD19184E533400A766B3 /* MeuViewController.m */; };
 		FFC7DD1C184E533400A766B3 /* MeuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFC7DD1A184E533400A766B3 /* MeuViewController.xib */; };
 		FFC7DD1E184E562C00A766B3 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFC7DD1D184E562C00A766B3 /* CoreLocation.framework */; };
+		FFDB3309185A34FB00764D78 /* denuncia.m in Sources */ = {isa = PBXBuildFile; fileRef = FFDB3308185A34FB00764D78 /* denuncia.m */; };
+		FFDB330B185A3F1700764D78 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FFDB330A185A3F1700764D78 /* libsqlite3.dylib */; };
+		FFDB330E185A3FF000764D78 /* banco.m in Sources */ = {isa = PBXBuildFile; fileRef = FFDB330D185A3FF000764D78 /* banco.m */; };
 		FFDEB6C118578217002AA22A /* BPFlo_PMPR.PNG in Resources */ = {isa = PBXBuildFile; fileRef = FFDEB6C018578217002AA22A /* BPFlo_PMPR.PNG */; };
 /* End PBXBuildFile section */
 
@@ -109,6 +112,12 @@
 		FFC7DD19184E533400A766B3 /* MeuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeuViewController.m; sourceTree = "<group>"; };
 		FFC7DD1A184E533400A766B3 /* MeuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MeuViewController.xib; sourceTree = "<group>"; };
 		FFC7DD1D184E562C00A766B3 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		FFDB3304185A1E8F00764D78 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		FFDB3307185A34FB00764D78 /* denuncia.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = denuncia.h; sourceTree = "<group>"; };
+		FFDB3308185A34FB00764D78 /* denuncia.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = denuncia.m; sourceTree = "<group>"; };
+		FFDB330A185A3F1700764D78 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		FFDB330C185A3FF000764D78 /* banco.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = banco.h; sourceTree = "<group>"; };
+		FFDB330D185A3FF000764D78 /* banco.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = banco.m; sourceTree = "<group>"; };
 		FFDEB6C018578217002AA22A /* BPFlo_PMPR.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BPFlo_PMPR.PNG; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -117,6 +126,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFDB330B185A3F1700764D78 /* libsqlite3.dylib in Frameworks */,
 				FF19A0BA18579B44006B59A6 /* MapKit.framework in Frameworks */,
 				FFC7DCEC184E52E000A766B3 /* CoreGraphics.framework in Frameworks */,
 				FFC7DCEE184E52E000A766B3 /* UIKit.framework in Frameworks */,
@@ -188,6 +198,8 @@
 		FFC7DCE8184E52E000A766B3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FFDB330A185A3F1700764D78 /* libsqlite3.dylib */,
+				FFDB3304185A1E8F00764D78 /* CoreData.framework */,
 				FF19A0B918579B44006B59A6 /* MapKit.framework */,
 				FF26A6271850EB24005A5472 /* MessageUI.framework */,
 				FFC7DD1D184E562C00A766B3 /* CoreLocation.framework */,
@@ -202,6 +214,7 @@
 		FFC7DCEF184E52E000A766B3 /* forcaVerde */ = {
 			isa = PBXGroup;
 			children = (
+				FFDB3306185A34A000764D78 /* Model */,
 				FFC7DCF8184E52E000A766B3 /* AppDelegate.h */,
 				FFC7DCF9184E52E000A766B3 /* AppDelegate.m */,
 				FFC7DCFB184E52E000A766B3 /* Images.xcassets */,
@@ -261,6 +274,17 @@
 				FFC7DD0B184E52E000A766B3 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FFDB3306185A34A000764D78 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FFDB3307185A34FB00764D78 /* denuncia.h */,
+				FFDB3308185A34FB00764D78 /* denuncia.m */,
+				FFDB330C185A3FF000764D78 /* banco.h */,
+				FFDB330D185A3FF000764D78 /* banco.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -371,7 +395,9 @@
 				EA5135BE184EAF0000AC3069 /* PagIniViewController.m in Sources */,
 				EA5135C3184EB0A900AC3069 /* SelectTipoCrime.m in Sources */,
 				EA96EFB118510F40000FF126 /* TiposCrimes.m in Sources */,
+				FFDB3309185A34FB00764D78 /* denuncia.m in Sources */,
 				FFC7DCFA184E52E000A766B3 /* AppDelegate.m in Sources */,
+				FFDB330E185A3FF000764D78 /* banco.m in Sources */,
 				EA4E79161856813E00C2B619 /* PoliciaMilitar.m in Sources */,
 				EA4E7912185677F200C2B619 /* MaisInfoPolViewController.m in Sources */,
 				EA96EFA9185108C3000FF126 /* CrimesAmbientais.m in Sources */,

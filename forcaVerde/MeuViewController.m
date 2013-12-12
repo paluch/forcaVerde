@@ -135,8 +135,8 @@
              
              
              [self setCidade:city];
-             
              [self setLogradouro:countryName];
+             [[UIApplication sharedApplication] setApplicationIconBadgeNumber:1];
          }];
         
         
