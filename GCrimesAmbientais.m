@@ -35,10 +35,10 @@
         CrimesAmbientais *crime1 = [[CrimesAmbientais alloc]initWithName:@"Crimes contra fauna" info:@"Matar, perseguir, caçar, apanhar, utilizar espécimes da fauna silvestre, nativos ou em rota migratória, sem a devida permissão, licença ou autorização da autoridade competente" picture:@"jaguatirica-e1358515997707.jpg"];
         [CrimesInfo addObject:crime1];
         
-        CrimesAmbientais *crime2 = [[CrimesAmbientais alloc]initWithName:@"Crimes contra flora"info:@"Cortar, Destruir ou danificar floresta considerada de preservação permanente, mesmo que em formação, ou utilizá-la com infringência das normas de proteção;Provocar incêndio em mata ou floresta;Fabricar, vender, transportar ou soltar balões que possam provocar incêndios nas florestas e demais formas de vegetação, em áreas urbanas ou qualquer tipo de assentamento humano." picture:nil];
+        CrimesAmbientais *crime2 = [[CrimesAmbientais alloc]initWithName:@"Crimes contra flora"info:@"Cortar, Destruir ou danificar floresta considerada de preservação permanente, mesmo que em formação, ou utilizá-la com infringência das normas de proteção;Provocar incêndio em mata ou floresta;Fabricar, vender, transportar ou soltar balões que possam provocar incêndios nas florestas e demais formas de vegetação, em áreas urbanas ou qualquer tipo de assentamento humano." picture:@"pinheiro.jpg"];
         [CrimesInfo addObject:crime2];
         
-        CrimesAmbientais *crime3 = [[CrimesAmbientais alloc]initWithName:@"Poluição e outros crimes ambientais" info:@"Causar poluição de qualquer natureza em níveis tais que resultem ou possam resultar em danos à saúde humana, ou que provoquem a mortalidade de animais ou a destruição significativa da flora."  picture:nil];
+        CrimesAmbientais *crime3 = [[CrimesAmbientais alloc]initWithName:@"Poluição e outros crimes ambientais" info:@"Causar poluição de qualquer natureza em níveis tais que resultem ou possam resultar em danos à saúde humana, ou que provoquem a mortalidade de animais ou a destruição significativa da flora."  picture:@"rios.jpg"];
         [CrimesInfo addObject:crime3];
         
         CrimesAmbientais *crime4 = [[CrimesAmbientais alloc]initWithName:@"Crimes contra o ordenamento Urbano e Patrimônio Cultural" info:@"1. Destruir, inutilizar ou deteriorar: bem especialmente protegido por lei, ato administrativo ou decisão judicial; arquivo, registro, museu, biblioteca, pinacoteca, instalação científica ou similar protegido por lei, ato administrativo ou decisão judicial."  picture:nil];
