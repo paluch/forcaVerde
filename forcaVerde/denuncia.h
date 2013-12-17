@@ -12,12 +12,12 @@
 
 @property (strong, nonatomic) NSString *cod;
 @property (strong, nonatomic) UIImage* Foto;
-@property (strong, nonatomic) NSString* Crime;
+@property int Crime;
 @property float Latitude;
 @property float Longitude;
 @property float Precisao;
 @property (strong, nonatomic) NSString* DataHora;
 
 
--(id)initWithFoto:(UIImage*)f Crime:(NSString*)c DataHora:(NSString*)d Latitude:(float)la Longitude:(float)lo Precisao:(float)pr;
+-(id)initWithFoto:(UIImage*)f Crime:(int)c DataHora:(NSString*)d Latitude:(float)la Longitude:(float)lo Precisao:(float)pr;
 @end

@@ -19,6 +19,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    
+    
     //PagIniViewController *mvc = [[PagIniViewController alloc] init];
     MeuViewController *mvc = [[MeuViewController alloc] init];
     PagIniViewController *pag = [[PagIniViewController alloc]init];
@@ -28,9 +31,9 @@
     
     //[[self window] setRootViewController:mvc];
    
-    
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:mvc];
     UITabBarController *tbc =[[UITabBarController alloc]init];
-    [tbc setViewControllers:@[pag,mvc,tip,po]];
+    [tbc setViewControllers:@[pag,nav,tip,po]];
     
     [[self window]setRootViewController:tbc];
     

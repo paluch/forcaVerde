@@ -10,7 +10,7 @@
 
 @implementation denuncia
 
-- (id)initWithFoto:(UIImage*)f Crime:(NSString*)c DataHora:(NSString*)d Latitude:(float)la Longitude:(float)lo Precisao:(float)pr
+- (id)initWithFoto:(UIImage*)f Crime:(int)c DataHora:(NSString*)d Latitude:(float)la Longitude:(float)lo Precisao:(float)pr
 {
     self = [super init];
     if (self) {

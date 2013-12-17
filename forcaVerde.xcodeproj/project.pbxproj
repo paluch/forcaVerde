@@ -47,6 +47,12 @@
 		FFDB330B185A3F1700764D78 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FFDB330A185A3F1700764D78 /* libsqlite3.dylib */; };
 		FFDB330E185A3FF000764D78 /* banco.m in Sources */ = {isa = PBXBuildFile; fileRef = FFDB330D185A3FF000764D78 /* banco.m */; };
 		FFDEB6C118578217002AA22A /* BPFlo_PMPR.PNG in Resources */ = {isa = PBXBuildFile; fileRef = FFDEB6C018578217002AA22A /* BPFlo_PMPR.PNG */; };
+		FFEB1E8E18606CB9003C71BF /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFEB1E8D18606CB9003C71BF /* SystemConfiguration.framework */; };
+		FFEB1E9118606D34003C71BF /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = FFEB1E9018606D34003C71BF /* Reachability.m */; };
+		FFEB1E9518607416003C71BF /* AbrirFoto.m in Sources */ = {isa = PBXBuildFile; fileRef = FFEB1E9318607416003C71BF /* AbrirFoto.m */; };
+		FFEB1E9618607416003C71BF /* AbrirFoto.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFEB1E9418607416003C71BF /* AbrirFoto.xib */; };
+		FFEB1E9B18607CE9003C71BF /* celula.m in Sources */ = {isa = PBXBuildFile; fileRef = FFEB1E9A18607CE9003C71BF /* celula.m */; };
+		FFEB1E9D18607D09003C71BF /* celula.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFEB1E9C18607D09003C71BF /* celula.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +125,15 @@
 		FFDB330C185A3FF000764D78 /* banco.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = banco.h; sourceTree = "<group>"; };
 		FFDB330D185A3FF000764D78 /* banco.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = banco.m; sourceTree = "<group>"; };
 		FFDEB6C018578217002AA22A /* BPFlo_PMPR.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BPFlo_PMPR.PNG; sourceTree = "<group>"; };
+		FFEB1E8D18606CB9003C71BF /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		FFEB1E8F18606D34003C71BF /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		FFEB1E9018606D34003C71BF /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		FFEB1E9218607416003C71BF /* AbrirFoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbrirFoto.h; sourceTree = "<group>"; };
+		FFEB1E9318607416003C71BF /* AbrirFoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbrirFoto.m; sourceTree = "<group>"; };
+		FFEB1E9418607416003C71BF /* AbrirFoto.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AbrirFoto.xib; sourceTree = "<group>"; };
+		FFEB1E9918607CE9003C71BF /* celula.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = celula.h; sourceTree = "<group>"; };
+		FFEB1E9A18607CE9003C71BF /* celula.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = celula.m; sourceTree = "<group>"; };
+		FFEB1E9C18607D09003C71BF /* celula.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = celula.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +141,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFEB1E8E18606CB9003C71BF /* SystemConfiguration.framework in Frameworks */,
 				FFDB330B185A3F1700764D78 /* libsqlite3.dylib in Frameworks */,
 				FF19A0BA18579B44006B59A6 /* MapKit.framework in Frameworks */,
 				FFC7DCEC184E52E000A766B3 /* CoreGraphics.framework in Frameworks */,
@@ -183,6 +199,14 @@
 				FFC7DD18184E533400A766B3 /* MeuViewController.h */,
 				FFC7DD19184E533400A766B3 /* MeuViewController.m */,
 				FFC7DD1A184E533400A766B3 /* MeuViewController.xib */,
+				FFEB1E8F18606D34003C71BF /* Reachability.h */,
+				FFEB1E9018606D34003C71BF /* Reachability.m */,
+				FFEB1E9218607416003C71BF /* AbrirFoto.h */,
+				FFEB1E9318607416003C71BF /* AbrirFoto.m */,
+				FFEB1E9418607416003C71BF /* AbrirFoto.xib */,
+				FFEB1E9918607CE9003C71BF /* celula.h */,
+				FFEB1E9A18607CE9003C71BF /* celula.m */,
+				FFEB1E9C18607D09003C71BF /* celula.xib */,
 			);
 			name = tiraFoto;
 			sourceTree = "<group>";
@@ -210,6 +234,7 @@
 		FFC7DCE8184E52E000A766B3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FFEB1E8D18606CB9003C71BF /* SystemConfiguration.framework */,
 				FFDB330A185A3F1700764D78 /* libsqlite3.dylib */,
 				FFDB3304185A1E8F00764D78 /* CoreData.framework */,
 				FF19A0B918579B44006B59A6 /* MapKit.framework */,
@@ -376,12 +401,14 @@
 				EA66B7EA18514CBC0089EE54 /* filhotes.jpg in Resources */,
 				FFC7DCF4184E52E000A766B3 /* InfoPlist.strings in Resources */,
 				FFC7DD1C184E533400A766B3 /* MeuViewController.xib in Resources */,
+				FFEB1E9618607416003C71BF /* AbrirFoto.xib in Resources */,
 				FFC7DCFC184E52E000A766B3 /* Images.xcassets in Resources */,
 				FFDEB6C118578217002AA22A /* BPFlo_PMPR.PNG in Resources */,
 				EA4E7913185677F200C2B619 /* MaisInfoPolViewController.xib in Resources */,
 				EA96EFB218510F40000FF126 /* TiposCrimes.xib in Resources */,
 				EA66B7E4185141850089EE54 /* infoCrimes.xib in Resources */,
 				EA5135BF184EAF0000AC3069 /* PagIniViewController.xib in Resources */,
+				FFEB1E9D18607D09003C71BF /* celula.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,6 +428,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA5135BE184EAF0000AC3069 /* PagIniViewController.m in Sources */,
+				FFEB1E9B18607CE9003C71BF /* celula.m in Sources */,
 				EA5135C3184EB0A900AC3069 /* SelectTipoCrime.m in Sources */,
 				EA96EFB118510F40000FF126 /* TiposCrimes.m in Sources */,
 				FFDB3309185A34FB00764D78 /* denuncia.m in Sources */,
@@ -416,6 +444,8 @@
 				FF19A0BD18579EB5006B59A6 /* Anotacao.m in Sources */,
 				EA4E7919185682FE00C2B619 /* GPoliciaMilitar.m in Sources */,
 				FFC7DCF6184E52E000A766B3 /* main.m in Sources */,
+				FFEB1E9518607416003C71BF /* AbrirFoto.m in Sources */,
+				FFEB1E9118606D34003C71BF /* Reachability.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

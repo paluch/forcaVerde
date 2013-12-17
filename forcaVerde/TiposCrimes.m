@@ -67,7 +67,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 
-    return [[[GCrimesAmbientais sharedCrimes]TodosCrimes]count];;
+    return [[[GCrimesAmbientais sharedCrimes]TodosCrimes]count];
 }
 
 -(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section

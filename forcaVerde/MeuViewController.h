@@ -10,8 +10,10 @@
 #import <CoreLocation/CoreLocation.h>
 #import <MessageUI/MessageUI.h>
 #import <MapKit/MapKit.h>
+#import <SystemConfiguration/SystemConfiguration.h>
 
-@interface MeuViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate,CLLocationManagerDelegate, MFMailComposeViewControllerDelegate>
+
+@interface MeuViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate,CLLocationManagerDelegate, MFMailComposeViewControllerDelegate, UIPickerViewDataSource, UIPickerViewDelegate>
 {
     CLLocationManager *locationManager;
 }
@@ -28,6 +30,15 @@
 @property (strong,nonatomic) NSString *Logradouro;
 
 @property (strong,nonatomic) NSString *Cidade;
-@property (weak,nonatomic) NSString *tema;
+@property (strong,nonatomic) NSString *tema;
 @property (weak,nonatomic) NSString *outro;
+@property (weak, nonatomic) IBOutlet UIPickerView *tiposcrimes;
+
+@property (strong, nonatomic) NSString *DataHora;
+@property float latitude;
+@property float longetude;
+@property float precisao;
+@property int posicaoCrime;
+
+- (void) updateLocalizacaoPaluch;
 @end

@@ -49,7 +49,7 @@
                 NSLog(@"BD criado com sucesso");
             else
                 NSLog(@"BD aberto com sucesso");
-            const char *sql_stmt = "CREATE TABLE IF NOT EXISTS denuncias (id INTEGER PRIMARY KEY AUTOINCREMENT, crime TEXT, datahora TEXT, latitude FLOAT, longitude FLOAT, precisao FLOAT, imagefile TEXT)";
+            const char *sql_stmt = "CREATE TABLE IF NOT EXISTS denuncias (id INTEGER PRIMARY KEY AUTOINCREMENT, crime INTEGER, datahora TEXT, latitude FLOAT, longitude FLOAT, precisao FLOAT, imagefile TEXT)";
             if (sqlite3_exec(_meuDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK)
                 NSLog(@"Falha ao criar a tabela");
             else
@@ -76,7 +76,7 @@
             [itens removeAllObjects];
             while (sqlite3_step(statement) == SQLITE_ROW) {
                 NSString *cod = [[NSString alloc] initWithUTF8String:(const char *) sqlite3_column_text(statement, 0)];
-                NSString *crime = [[NSString alloc] initWithUTF8String:(const char *) sqlite3_column_text(statement, 1)];
+                NSNumber *crime = [NSNumber numberWithInt:(int)sqlite3_column_int(statement, 3)];
                 NSString *datahora = [[NSString alloc] initWithUTF8String:(const char *) sqlite3_column_text(statement, 2)];
                 NSNumber *latitude = [NSNumber numberWithFloat:(float)sqlite3_column_double(statement, 3)];
                 NSNumber *longitude = [NSNumber numberWithFloat:(float)sqlite3_column_double(statement, 4)];
@@ -85,7 +85,7 @@
                 
                 UIImage *customImage = [UIImage imageWithContentsOfFile:imagefile];
                 
-                denuncia *den = [[denuncia alloc] initWithFoto:customImage Crime:crime DataHora:datahora Latitude:latitude.floatValue Longitude:longitude.floatValue Precisao:precisao.floatValue];
+                denuncia *den = [[denuncia alloc] initWithFoto:customImage Crime:(int)crime DataHora:datahora Latitude:latitude.floatValue Longitude:longitude.floatValue Precisao:precisao.floatValue];
                 [den setCod:cod];
                 [itens addObject:den];
 
@@ -118,7 +118,7 @@
     
     
     if (sqlite3_open(dbpath, &_meuDB) == SQLITE_OK) {
-        NSString *insertSQL = [NSString stringWithFormat:@"INSERT INTO denuncias (crime, datahora, latitude, longitude, precisao, imagefile) VALUES (\"%@\", \"%@\", %f, %f, %f, \"%@\")", den.Crime, den.DataHora, den.Latitude, den.Longitude, den.Precisao, imagePath];
+        NSString *insertSQL = [NSString stringWithFormat:@"INSERT INTO denuncias (crime, datahora, latitude, longitude, precisao, imagefile) VALUES (%d, \"%@\", %f, %f, %f, \"%@\")", den.Crime, den.DataHora, den.Latitude, den.Longitude, den.Precisao, imagePath];
         const char *insert_stmt = [insertSQL UTF8String];
         if (sqlite3_exec(_meuDB, insert_stmt, NULL, NULL, &errMsg) != SQLITE_OK)
             state = NO;
@@ -129,11 +129,11 @@
     } else {
         state = NO;
     }
-    
+    [[UIApplication sharedApplication] setApplicationIconBadgeNumber:[self tamanhoDoBanco]];
     return state;
 }
 - (int)tamanhoDoBanco {
-    return [[self itens] count];
+    return (int)[[self itens] count];
 }
 
 - (BOOL)removeData:(denuncia *)den
@@ -156,7 +156,7 @@
     } else {
         state = NO;
     }
-    
+    [[UIApplication sharedApplication] setApplicationIconBadgeNumber:[self tamanhoDoBanco]];
     return state;
 }
 @end

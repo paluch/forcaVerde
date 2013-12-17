@@ -15,7 +15,7 @@
 
 @property (strong, nonatomic) NSString *databasePath;
 @property (nonatomic) sqlite3 *meuDB;
-
+@property (strong, nonatomic) denuncia* escolhida;
 
 + (banco *)meuBanco;
 

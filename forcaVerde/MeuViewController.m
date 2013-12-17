@@ -10,6 +10,10 @@
 #import "Anotacao.h"
 #import "denuncia.h"
 #import "banco.h"
+#import "Reachability.h"
+#import "AbrirFoto.h"
+#import "GCrimesAmbientais.h"
+#include "CrimesAmbientais.h"
 
 @interface MeuViewController ()
 
@@ -25,6 +29,11 @@
         
         [self.view addSubview: [self telaInicial]];
         [self setTitle:@"Denuncia"];
+        
+        UIBarButtonItem *bbi = [[UIBarButtonItem alloc] initWithTitle:@"Foto" style:UIBarButtonItemStyleBordered target:self action:@selector(takePhoto:)];
+        [[self navigationItem] setLeftBarButtonItem:bbi animated:YES];
+        UIBarButtonItem *bbr = [[UIBarButtonItem alloc] initWithTitle:@"Escolher" style:UIBarButtonItemStyleBordered target:self action:@selector(selectPhoto:)];
+        [[self navigationItem] setRightBarButtonItem:bbr animated:YES];
     
     }
     return self;
@@ -38,10 +47,9 @@
     locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     //[locationManager startUpdatingLocation];
     // Do any additional setup after loading the view from its nib.
+    [[self tiposcrimes] setTransform: CGAffineTransformMakeScale(1.0, 0.5)];
     
-  
-    
-}
+    }
 
 - (void)didReceiveMemoryWarning
 {
@@ -63,18 +71,36 @@
     [locationManager startUpdatingLocation];
     
 }
-
+- (void)viewDidAppear:(BOOL)animated {
+    if ([[banco meuBanco] escolhida]!=nil) {
+        denuncia *den = [[banco meuBanco] escolhida];
+        [[self imageView] setImage:[den Foto]];
+        [self setLatitude:[den Latitude]];
+        [self setLongetude:[den Longitude]];
+        [self setPrecisao:[den Precisao]];
+        [self setDataHora:[den DataHora]];
+        [self setPosicaoCrime:[den Crime]];
+        
+        [[self tiposcrimes] selectRow:_posicaoCrime inComponent:0 animated:YES];
+        
+        [self updateLocalizacaoPaluch];
+    }
+}
 - (IBAction)selectPhoto:(id)sender {
-    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
-    picker.delegate = self;
-    picker.allowsEditing = YES;
-    picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+//    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+//    picker.delegate = self;
+//    picker.allowsEditing = YES;
+//    picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+//    
+//
+//
+//    
+//    [self presentViewController:picker animated:YES completion:NULL];
+//    [locationManager startUpdatingLocation];
     
-
-
-    
-    [self presentViewController:picker animated:YES completion:NULL];
-    [locationManager startUpdatingLocation];
+    AbrirFoto *ab = [[AbrirFoto alloc] init];
+    [[banco meuBanco] setEscolhida:nil];
+    [[self navigationController] pushViewController:ab animated:YES];
 }
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     
@@ -101,16 +127,22 @@
     [errorAlert show];
 }
 
-- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
-{
-    NSLog(@"didUpdateToLocation: %@", newLocation);
-    [self setDescriGPS:newLocation.description];
-    CLLocation *currentLocation = newLocation;
-    self.Descricao = newLocation.description;
-    if (currentLocation != nil) {
-        self.longitudeLabel.text = [NSString stringWithFormat:@"%.8f", currentLocation.coordinate.longitude];
-        self.latitudeLabel.text = [NSString stringWithFormat:@"%.8f", currentLocation.coordinate.latitude];
-        CLLocationCoordinate2D cld = CLLocationCoordinate2DMake(currentLocation.coordinate.latitude, currentLocation.coordinate.longitude);
+- (void) updateLocalizacaoPaluch{
+    BOOL internet = NO;
+    if ([[Reachability reachabilityWithHostName:@"google.com"] currentReachabilityStatus] == ReachableViaWiFi) {
+        internet = YES;
+    } else if ([[Reachability reachabilityWithHostName:@"google.com"] currentReachabilityStatus] == ReachableViaWWAN) {
+        internet = YES;
+    } else if ([[Reachability reachabilityWithHostName:@"google.com"] currentReachabilityStatus] == NotReachable) {
+        internet = NO;
+    }
+    
+    if (internet) {
+        
+        //[[self meuMapView] annotations];
+        
+        CLLocation *currentLocation = [[CLLocation alloc] initWithLatitude:self.latitude longitude:self.longetude];
+        CLLocationCoordinate2D cld = CLLocationCoordinate2DMake(self.latitude, self.longetude);
         [[self meuMapView] setCenterCoordinate:cld animated:YES];
         Anotacao *addAnnotation = [[Anotacao alloc] initWithTitle:@"teste" andCoordinate:cld];
         [[self meuMapView] addAnnotation:addAnnotation];
@@ -140,21 +172,55 @@
              [self setLogradouro:countryName];
              
          }];
-        
+    }
+    
+}
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
+{
+    //NSLog(@"didUpdateToLocation: %@", newLocation);
+    [self setDescriGPS:newLocation.description];
+    CLLocation *currentLocation = newLocation;
+    self.Descricao = newLocation.description;
+    if (currentLocation != nil) {
+        self.longetude = currentLocation.coordinate.longitude;
+        self.latitude = currentLocation.coordinate.latitude;
+        self.precisao = currentLocation.horizontalAccuracy;
+        self.DataHora = [[NSString alloc] initWithFormat:@"%@",currentLocation.timestamp.description];
+
+        [self updateLocalizacaoPaluch];
         
     }
 }
 
 
 - (IBAction)enviar:(id)sender {
+    BOOL internet = NO;
     
+    CrimesAmbientais* crime;
+    crime = [[[GCrimesAmbientais sharedCrimes]TodosCrimes] objectAtIndex: [[self tiposcrimes] selectedRowInComponent:0]];
+    [self setTema:[crime Crime]];
+    [self setPosicaoCrime:[[self tiposcrimes] selectedRowInComponent:0]];
+    
+    if ([[Reachability reachabilityWithHostName:@"google.com"] currentReachabilityStatus] == ReachableViaWiFi) {
+        internet = YES;
+    } else if ([[Reachability reachabilityWithHostName:@"google.com"] currentReachabilityStatus] == ReachableViaWWAN) {
+        internet = YES;
+    } else if ([[Reachability reachabilityWithHostName:@"google.com"] currentReachabilityStatus] == NotReachable) {
+        internet = NO;
+    }
+    
+    if (!internet) {
+        denuncia *den = [[denuncia alloc] initWithFoto:self.imageView.image Crime:_posicaoCrime DataHora:_DataHora Latitude:_latitude Longitude:_longetude Precisao:_precisao];
+        [[banco meuBanco] saveData:den];
+    } else {
     MFMailComposeViewController *composer = [[MFMailComposeViewController alloc] init];
     [composer setMailComposeDelegate:self];
     if([MFMailComposeViewController canSendMail]) {
         [composer setToRecipients:[NSArray arrayWithObjects:@"paluch.tiago@gmail.com",nil]];
         [composer setSubject:[self Cidade]];
         
-        NSString *corpo = [[NSString alloc] initWithFormat:@"%@ \n %@",[self Logradouro],[self descriGPS]];
+        NSString *corpo = [[NSString alloc] initWithFormat:@"%@ \n %@ \n %@",[self tema], [self Logradouro],[self descriGPS]];
         
         [composer setMessageBody:corpo isHTML:NO];
         
@@ -172,6 +238,8 @@
         [composer addAttachmentData:datm  mimeType:@"image/jpeg" fileName:@"mapa.jpg"];
         
         [self presentViewController:composer animated:YES completion:nil];
+        
+    }
     }
 }
 - (void)mailComposeController:(MFMailComposeViewController *)controller
@@ -183,5 +251,46 @@
 - (BOOL)prefersStatusBarHidden
 {
     return YES;
+}
+-(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
+{
+    return 1;
+}
+
+
+-(NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
+{
+    return [[[GCrimesAmbientais sharedCrimes]TodosCrimes]count];
+    
+}
+
+- (UIView *)pickerView:(UIPickerView *)seleciona viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view
+{
+    UILabel *lbl = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 0.0f, [seleciona rowSizeForComponent:component].width-10, [seleciona rowSizeForComponent:component].height-10)];
+    
+    
+    CrimesAmbientais* crime;
+    crime = [[[GCrimesAmbientais sharedCrimes]TodosCrimes] objectAtIndex: row];
+    
+    lbl.text = [crime Crime];
+    lbl.adjustsFontSizeToFitWidth = YES;
+    lbl.font=[UIFont systemFontOfSize:20];
+    lbl.backgroundColor = [UIColor colorWithRed:0
+                                          green:0.2
+                                           blue:0
+                                          alpha:0.5];
+    [lbl setTransform:CGAffineTransformMakeScale(1.0, 2.0)];
+    return lbl;
+    
+}
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
+{
+    CrimesAmbientais* crime;
+    crime = [[[GCrimesAmbientais sharedCrimes]TodosCrimes] objectAtIndex: row];
+    [self setTema:[crime Crime]];
+    [self setPosicaoCrime:row];
+}
+- (CGSize)rowSizeForComponent:(NSInteger)component {
+    return CGSizeMake(320, 120);
 }
 @end
