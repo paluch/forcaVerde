@@ -47,7 +47,7 @@
     locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     //[locationManager startUpdatingLocation];
     // Do any additional setup after loading the view from its nib.
-    [[self tiposcrimes] setTransform: CGAffineTransformMakeScale(1.0, 0.5)];
+    //[[self tiposcrimes] setTransform: CGAffineTransformMakeScale(1.0, 0.5)];
     
     }
 
@@ -279,7 +279,7 @@
                                           green:0.2
                                            blue:0
                                           alpha:0.5];
-    [lbl setTransform:CGAffineTransformMakeScale(1.0, 2.0)];
+    //[lbl setTransform:CGAffineTransformMakeScale(1.0, 2.0)];
     return lbl;
     
 }
@@ -288,7 +288,7 @@
     CrimesAmbientais* crime;
     crime = [[[GCrimesAmbientais sharedCrimes]TodosCrimes] objectAtIndex: row];
     [self setTema:[crime Crime]];
-    [self setPosicaoCrime:row];
+    [self setPosicaoCrime:(int)row];
 }
 - (CGSize)rowSizeForComponent:(NSInteger)component {
     return CGSizeMake(320, 120);
