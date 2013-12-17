@@ -41,7 +41,7 @@
         CrimesAmbientais *crime3 = [[CrimesAmbientais alloc]initWithName:@"Poluição e outros crimes ambientais" info:@"Causar poluição de qualquer natureza em níveis tais que resultem ou possam resultar em danos à saúde humana, ou que provoquem a mortalidade de animais ou a destruição significativa da flora."  picture:@"rios.jpg"];
         [CrimesInfo addObject:crime3];
         
-        CrimesAmbientais *crime4 = [[CrimesAmbientais alloc]initWithName:@"Crimes contra o ordenamento Urbano e Patrimônio Cultural" info:@"1. Destruir, inutilizar ou deteriorar: bem especialmente protegido por lei, ato administrativo ou decisão judicial; arquivo, registro, museu, biblioteca, pinacoteca, instalação científica ou similar protegido por lei, ato administrativo ou decisão judicial."  picture:nil];
+        CrimesAmbientais *crime4 = [[CrimesAmbientais alloc]initWithName:@"Crimes contra o ordenamento Urbano e Patrimônio Cultural" info:@"1. Destruir, inutilizar ou deteriorar: bem especialmente protegido por lei, ato administrativo ou decisão judicial; arquivo, registro, museu, biblioteca, pinacoteca, instalação científica ou similar protegido por lei, ato administrativo ou decisão judicial."  picture:@"ordenamento.jpg"];
         [CrimesInfo addObject:crime4];
         
         CrimesAmbientais *crime5 = [[CrimesAmbientais alloc]initWithName:@"Crimes contra a administração ambiental" info:@" 1. Fazer o funcionário público afirmação falsa ou enganosa, omitir a verdade, sonegar informações ou dados técnico-científicos em procedimentos de autorização ou de licenciamento ambiental." picture:nil];

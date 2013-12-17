@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		538D793B1860C97E004452FA /* ordenamento.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 538D79381860C97E004452FA /* ordenamento.jpg */; };
+		538D793C1860C97E004452FA /* pinheiro.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 538D79391860C97E004452FA /* pinheiro.jpg */; };
+		538D793D1860C97E004452FA /* rios.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 538D793A1860C97E004452FA /* rios.jpg */; };
+		538D793F1860CACE004452FA /* fundo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 538D793E1860CACE004452FA /* fundo.jpg */; };
 		EA4E7912185677F200C2B619 /* MaisInfoPolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4E7910185677F200C2B619 /* MaisInfoPolViewController.m */; };
 		EA4E7913185677F200C2B619 /* MaisInfoPolViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA4E7911185677F200C2B619 /* MaisInfoPolViewController.xib */; };
 		EA4E79161856813E00C2B619 /* PoliciaMilitar.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4E79151856813E00C2B619 /* PoliciaMilitar.m */; };
@@ -66,6 +70,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		538D79381860C97E004452FA /* ordenamento.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ordenamento.jpg; sourceTree = "<group>"; };
+		538D79391860C97E004452FA /* pinheiro.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pinheiro.jpg; sourceTree = "<group>"; };
+		538D793A1860C97E004452FA /* rios.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rios.jpg; sourceTree = "<group>"; };
+		538D793E1860CACE004452FA /* fundo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fundo.jpg; sourceTree = "<group>"; };
 		EA4E790F185677F200C2B619 /* MaisInfoPolViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaisInfoPolViewController.h; sourceTree = "<group>"; };
 		EA4E7910185677F200C2B619 /* MaisInfoPolViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaisInfoPolViewController.m; sourceTree = "<group>"; };
 		EA4E7911185677F200C2B619 /* MaisInfoPolViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MaisInfoPolViewController.xib; sourceTree = "<group>"; };
@@ -168,6 +176,10 @@
 		EA66B7E818514C550089EE54 /* imagens */ = {
 			isa = PBXGroup;
 			children = (
+				538D793E1860CACE004452FA /* fundo.jpg */,
+				538D79381860C97E004452FA /* ordenamento.jpg */,
+				538D79391860C97E004452FA /* pinheiro.jpg */,
+				538D793A1860C97E004452FA /* rios.jpg */,
 				EA7EF0A218578A5500875056 /* jaguatirica-e1358515997707.jpg */,
 				FFDEB6C018578217002AA22A /* BPFlo_PMPR.PNG */,
 				EA66B7E918514CBC0089EE54 /* filhotes.jpg */,
@@ -404,8 +416,12 @@
 				FFEB1E9618607416003C71BF /* AbrirFoto.xib in Resources */,
 				FFC7DCFC184E52E000A766B3 /* Images.xcassets in Resources */,
 				FFDEB6C118578217002AA22A /* BPFlo_PMPR.PNG in Resources */,
+				538D793C1860C97E004452FA /* pinheiro.jpg in Resources */,
+				538D793D1860C97E004452FA /* rios.jpg in Resources */,
 				EA4E7913185677F200C2B619 /* MaisInfoPolViewController.xib in Resources */,
+				538D793B1860C97E004452FA /* ordenamento.jpg in Resources */,
 				EA96EFB218510F40000FF126 /* TiposCrimes.xib in Resources */,
+				538D793F1860CACE004452FA /* fundo.jpg in Resources */,
 				EA66B7E4185141850089EE54 /* infoCrimes.xib in Resources */,
 				EA5135BF184EAF0000AC3069 /* PagIniViewController.xib in Resources */,
 				FFEB1E9D18607D09003C71BF /* celula.xib in Resources */,

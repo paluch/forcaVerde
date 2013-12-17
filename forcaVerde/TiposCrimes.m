@@ -25,6 +25,9 @@
         
         [[self tableView] setSeparatorColor:[UIColor colorWithRed:0 green:1 blue:0 alpha:0.4]];
         
+        //UIImageView *img = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"fundo.jpg"]];
+        //[[self tableView] setBackgroundView:img];
+        
         [self.tabBarItem setTitle:@"Crimes ambientais"];
         [self.tabBarItem setImage:nil];
         
