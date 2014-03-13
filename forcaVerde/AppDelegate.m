@@ -37,7 +37,7 @@
     
     [[self window]setRootViewController:tbc];
     
-    [tbc.tabBar setBarTintColor:[UIColor colorWithRed:1 green:1 blue:0 alpha:0]];
+    [tbc.tabBar setBarTintColor:[UIColor colorWithRed:1 green:1 blue:1 alpha:0]];
     [tbc.tabBar setBounds:CGRectMake(0.0, 0.0, self.window.bounds.size.width, 50.0)];
     
  

@@ -129,6 +129,10 @@
 
 - (void) updateLocalizacaoPaluch{
     BOOL internet = NO;
+    
+    [[self meuMapView] removeAnnotations:self.meuMapView.annotations];
+    [[self meuMapView] removeOverlays:self.meuMapView.overlays];
+    
     if ([[Reachability reachabilityWithHostName:@"google.com"] currentReachabilityStatus] == ReachableViaWiFi) {
         internet = YES;
     } else if ([[Reachability reachabilityWithHostName:@"google.com"] currentReachabilityStatus] == ReachableViaWWAN) {
@@ -146,8 +150,20 @@
         [[self meuMapView] setCenterCoordinate:cld animated:YES];
         Anotacao *addAnnotation = [[Anotacao alloc] initWithTitle:@"teste" andCoordinate:cld];
         [[self meuMapView] addAnnotation:addAnnotation];
-        MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(cld, 500, 500);
-        MKCoordinateRegion adjustedRegion = [self.meuMapView regionThatFits:viewRegion];
+        
+        MKMapPoint annotationPoint = MKMapPointForCoordinate(addAnnotation.coordinate);
+        MKMapRect pointRect = MKMapRectMake(annotationPoint.x, annotationPoint.y, 500, 500);
+        MKMapRect pointRect2 = MKMapRectMake(annotationPoint.x, annotationPoint.y, -500, -500);
+        MKMapRect zoomRect = MKMapRectUnion(pointRect2, pointRect);
+        //[[self meuMapView] setVisibleMapRect:zoomRect animated:YES];
+        
+
+        
+        MKCoordinateRegion adjustedRegion = [self.meuMapView regionThatFits:MKCoordinateRegionMakeWithDistance(addAnnotation.coordinate, 500, 500)];
+        
+        adjustedRegion.span.longitudeDelta  = 0.005;
+        adjustedRegion.span.latitudeDelta  = 0.005;
+        
         [self.meuMapView setRegion:adjustedRegion animated:YES];
         
         CLGeocoder *reverseGeocoder = [[CLGeocoder alloc] init];
@@ -164,6 +180,7 @@
              
              
              CLPlacemark *myPlacemark = [placemarks objectAtIndex:0];
+             
              NSString *city = myPlacemark.locality;
              NSString *countryName = [[NSString alloc] initWithFormat:@"Cidade: %@ e endereco: %@", city, myPlacemark.description];
              
@@ -275,10 +292,10 @@
     lbl.text = [crime Crime];
     lbl.adjustsFontSizeToFitWidth = YES;
     lbl.font=[UIFont systemFontOfSize:20];
-    lbl.backgroundColor = [UIColor colorWithRed:0
-                                          green:0.2
-                                           blue:0
-                                          alpha:0.5];
+    //lbl.backgroundColor = [UIColor colorWithRed:0
+    //                                      green:0.2
+    //                                       blue:0
+    //                                      alpha:0.5];
     //[lbl setTransform:CGAffineTransformMakeScale(1.0, 2.0)];
     return lbl;
     
